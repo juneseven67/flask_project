@@ -1,10 +1,15 @@
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 import os
-
+from admin import admin
 
 # 實體化一個applicaiton
 # 帶入的__name__可以是任意字串,但通常都使用__name__
 app = Flask(__name__)
+
+# 搭配admin.py使用
+# 將admin裡面設定的route註冊到app裡面
+# 透過設定url_prefix將admin的route都加上admin的前綴
+app.register_blueprint(admin, url_prefix='/admin')
 
 # 定義路由,只要打上此application的IP:port/route就會啟動此function
 # 當使用html作為回傳的內容,需要使用render_template的功能
