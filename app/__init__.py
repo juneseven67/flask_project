@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 import os
-from admin import admin  
+from .admin import admin  
+# from admin import admin  
 # from 資料夾,檔案 import 藍圖
 # from admin.admin import admin
 
@@ -94,7 +95,8 @@ def mushroom():
                                 'mushroom.ico',
                                 mimetype='image/vnd.mcrosoft.icon')
 
-# 當此程式是啟動點會啟動app.run(import到別的程式中則不會)
-if __name__ == '__main__':
-    app.run(port=5000,debug=True)
+
+# 拉出去manage.py
+# if __name__ == '__main__':
+#    app.run(port=5000,debug=True)
     
