@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 import os
-from admin import admin
+from admin import admin  
+# from 資料夾,檔案 import 藍圖
+# from admin.admin import admin
 
 # 實體化一個applicaiton
 # 帶入的__name__可以是任意字串,但通常都使用__name__
